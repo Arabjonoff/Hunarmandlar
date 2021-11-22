@@ -1,0 +1,2 @@
+{% load i18n %}
+{% blocktrans %}Tasdiqlash elektron pochtasi {{email}} ga yuborildi..{% endblocktrans %}

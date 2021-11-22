@@ -1,0 +1,162 @@
+
+
+
+
+
+{% block content %}
+
+
+
+
+<!-- <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+  {% csrf_token %}
+  {{ form.as_p }}
+  {% if redirect_field_value %}
+  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+  {% endif %}
+
+</form> -->
+
+
+{% load i18n %}
+{% load account socialaccount %}
+
+
+
+
+
+  <div class="text-">
+    <h1>{% trans "" %}</h1>
+
+    {% get_providers as socialaccount_providers %}
+
+    {% if socialaccount_providers %}
+    <p><br> <a href="{{ signup_url }}"></a></p>
+
+   
+
+    {% include "socialaccount/snippets/login_extra.html" %}
+
+    {% else %}
+    <p>{% blocktrans %}
+    <a href="{{ signup_url }}">{% endblocktrans %}</p>
+    {% endif %}
+
+
+<!-- <body>
+    <div id="logreg-forms">
+        <form class="form-signin">
+            <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Tizimga kirish</h1>
+            <div class="social-login">
+                <a href="{% provider_login_url "google" %}"  class="btn google-btn social-btn" type="button"><span><i class="fab fa-google-plus-g"></i> Sign in with Google+</span> </a>
+            </div>
+            <p style="text-align:center"> Yoki  </p>
+            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus=""><br>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+            
+            <button class="btn btn-success btn-block" type="submit"><i class="fas fa-sign-in-alt"></i> Sign in</button>
+            <a href="#" id="forgot_pswd">Parolni unutdingizmi?
+            </a>
+            <hr>
+            
+            <button class="btn btn-primary btn-block" type="button" id="btn-signup"><i class="fas fa-user-plus"></i> Yangi hisob ochish</button>
+            </form>
+
+        
+            <br>
+            
+    </div>
+   
+</body>  -->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .social-login{
+            border-radius: 40px;
+        }
+        .facebook{
+            background-color: #3b5998 ;
+        }
+        .facebook a{
+            color: #fff;
+        }
+        .google{
+            background-color: #DB4437;
+        }
+
+        .google a{
+            color: #ffff;
+        }
+
+    </style>
+	<meta charset="UTF-8">
+	<title>HunarmandUz</title>
+	<meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="John Doe">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/static/fontawesome/css/all.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="/static/css/index.css">
+</head>
+<body>
+  <div id="registr_page_bgimg">
+	<div class="container-fluid">
+	  <div class="row registr_page_row">
+	  	<div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 mb-3">
+	  	  <form method="POST">
+	  	  	<div class="row">
+	  	  	<div class="col-12 text-center">
+	  	  	  <h1 class="registr_title">
+	  	  	    Ro'yhatdan o'ting
+	  	  	  </h1>
+	  	  	</div>
+	  	  	<div class="col-12 col-sm-6 col-md-6 col-lg-12 col-xl-12 forms">
+            {% csrf_token %}
+	  	  	  <label>Ism</label>
+           
+	  	  	  {{form.username}}
+	  	  	</div>
+	  	  	<div class="col-12 col-sm-6 col-md-6 col-lg-12 col-xl-12 forms ">
+	  	  	  <label>Parol</label>
+	  	  	  {{form.password1}}
+	  	  	</div>
+	  	  	<div class="col-12 col-sm-6 col-md-6 col-lg-12 col-xl-12 forms ">
+	  	  	  <label>Parolni tasdiqlang</label>
+            {{form.password2}}
+	  	  	</div>
+               
+                <div class="social-login google ml-3">
+                    <a href="{% provider_login_url "google" %}"  class="btn google-btn social-btn" type="button"><span><i class="fab fa-google-plus-g"></i> Google bilan kirish</span> </a>
+                </div>
+                <div class="social-login facebook ml-2">
+                    <a href="{% provider_login_url "facebook" method="js_sdk" %}"  class="btn facebook-btn social-btn" type="button"><span><i class="fab fa-facebook"></i> Facebook bilan kirish</span> </a>
+                </div>
+	  	  	<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12  text-center"><br>
+	  	  	  <input type="submit" value="Ro'yhatdan o'ting" class="submit">
+	  	  	</div>
+	  	   </div>
+	  	  </form>
+	  	 </div>
+	    <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
+	    	<div class="registr_page_img">
+	    		
+	    	</div>
+	    </div>
+	  </div>
+	</div>
+  </div>
+<script src="/static/js/index.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
+
+{% endblock %}

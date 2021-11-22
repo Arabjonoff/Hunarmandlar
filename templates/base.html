@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HunarmandUz</title>
+	<meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="John Doe">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/static/fontawesome/css/all.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="/static/css/index.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+  <div id="headerIMG">
+			<div class="nav1"><!--nav1-->
+				<div class="d-inline-block">
+					<a href="#" target="">
+						<img src="img/Hunarmadlar.png" class="craftsmen">
+					</a>
+				 </div>
+				 <div class="inputGroup">
+					  <span id="iconSearch" onclick="longInput()">
+						  <i class="fa fa-search"></i>
+					  </span>
+					<form action="#"class="d-inline-block">
+						<select id="selectLangue">
+							<option>UZ</option>
+							<option>EN</option>
+							<option>РУ</option>
+						</select>
+					</form>
+					<span id="iconUser">
+						<i class="far fa-user "></i>
+					</span>
+					<span id="iconHeart1" class="iconHeart1">
+						<i class="far fa-heart "></i>
+					</span>
+					<span id="iconHeart2" class="iconHeart2">
+						<i class="fas fa-heart "></i>
+					</span>
+  					<form action="#" class="d-inline-block">
+					   <input type="search" class="searchInput" list="browsers" name="browser"  id="searchInput">
+  						 <datalist id="browsers">
+   						    <option value="pichoqlar">
+    					    <option value="mebellar">
+    					    <option value="sopol idishlar">
+                </datalist>
+  					</form>
+				</div>
+			</div><!--nav1-->
+      <div class="nav2"><!--nav2-->
+         <nav class="navbar navbar-expand-lg navbar-light bg-dark pt-2">
+              <a class="navbar-brand" href="#">
+              	<img src="img/Hunarmadlar.png" class="craftsmen">
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="     #navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars text-white"></i>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active pb-2 pt-1">
+                   <a href="index3.html" target="_blank">
+                   	<span  class="text-white" style="font-size: 25px;">
+										  Royhatdan O'tish
+									  </span>
+                   </a>
+                  </li>
+                  <li class="nav-item pt-2 pb-2">
+                    <a href="#" class="nav-item active">
+                    	<span class="text-white" style="font-size: 25px;">
+                    	    Biz Haqimizda
+                      </span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link disabled text-white">
+                    	<span style="font-size: 25px;">menu4</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link disabled text-white ">
+                    	<span style="font-size: 25px;">menu5</span>
+                    </a>
+                  </li>
+                  <li class="nav-item pb-2 pt-2">
+                    <form action="#">
+                    	<select class="slesctMenu">
+                    	   <option>UZ</option>
+                    	   <option>EN</option>
+                    	   <option>РУ</option>
+                      </select>
+                    </form>
+                  </li>       
+                </ul>
+                <form class="form-inline my-2 my-lg-0" action="#">
+                  <input class="form-control mr-sm-2"  name="browsers" list="browsers" type="search" placeholder="Search" aria-label="Search">
+                  <datalist id="browsers">
+   						    <option value="pichoqlar">
+    					    <option value="mebellar">
+    					    <option value="sopol idishlar">
+                   </datalist>
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+              </div>
+            </nav>
+          </div><!--nav2-->
+          <div class="headerTitle">
+          	<h1>
+          		Har bir mahsulot mehr<br class="br">
+          		bilan tayyorlanadi
+          	</h1>
+          	<p>
+          		Milliy hunarmandlik buyumlarini online<br class="br">
+          		soting va sotib oling
+          	</p>
+          	<a href="index3.html" target="_blank">
+          		<button class="btnRegistr">
+          		  Ro'yhatdan o'ting
+          	  </button>
+          	</a>
+          </div>
+    </div>
+</header>
+
+
+{% block content %}
+    
+{% endblock content %}
+    
+
+<footer>
+	
+</footer>
+<script src="/static/js/index.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="/static/js/ajax_response.js"></script>
+</body>
+</html>
